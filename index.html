@@ -9,16 +9,17 @@
 
 <div id="alert" class="alert-box">
     <p id="alert-title">알림창임</p>
-    <button onclick="closeAlert()">X</button>
+    <button id="close">X</button>
 </div>
 
 <button onclick="openAlert('아이디이상함')">버튼1</button>
 <button onclick="openAlert('비밀번호이상함')">버튼2</button>
 
 <script>
-    function closeAlert() {
+
+    document.getElementById('close').addEventListener('click', function(){
         document.getElementById('alert').style.display = 'none';
-    }
+    })
 
     function openAlert(text) {
         document.getElementById('alert-title').innerHTML = text;
