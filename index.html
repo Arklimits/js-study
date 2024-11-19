@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<div class="black-bg" id="modal" tabindex="-1">
+<div class="modal fade" id="modal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <h4 class="modal-title" id="myModalLabel">로그인하세요</h4>
@@ -57,7 +57,7 @@
 
         // Modal show event
         $('.login-button').on('click', function() {
-            $('#modal').addClass('show-modal');
+            $('#modal').modal('show');
         });
     });
 </script>
