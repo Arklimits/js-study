@@ -46,7 +46,11 @@
     <li class="list-group-item">And a fifth one</li>
 </ul>
 
-<button class="login-button">로그인</button>
+<div class="main-bg">
+    <h4>Shirts on Sale</h4>
+    <button id="login-button" class="btn btn-danger">로그인</button>
+</div>
+
 
 <script>
     $(document).ready(function() {
@@ -56,7 +60,7 @@
         });
 
         // Modal show event
-        $('.login-button').on('click', function() {
+        $('#login-button').on('click', function() {
             $('#modal').modal('show');
         });
     });

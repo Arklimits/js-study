@@ -6,16 +6,11 @@
     display: none;
 }
 
-.list-group {
-    display: none;
-}
-
 .show {
     display: block;
 }
 
 .list-group {
-    display: block;
     height: 0;
     transition: all 1s;
     overflow: hidden;
@@ -24,4 +19,9 @@
 .show-list {
     visibility: visible;
     height: 210px;
+}
+
+.main-bg{
+    padding: 100px 20px;
+    background: lightgrey;
 }
