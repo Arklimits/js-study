@@ -26,12 +26,12 @@
             <h4 class="modal-title" id="myModalLabel">로그인하세요</h4>
             <form action="success.html">
                 <div class="my-3">
-                    <input type="text" class="form-control">
+                    <input id="id" type="text" class="form-control">
                 </div>
                 <div class="my-3">
-                    <input type="password" class="form-control">
+                    <input id="pw" type="password" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-primary">전송</button>
+                <button id="loginButton" type="submit" class="btn btn-primary">전송</button>
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
             </form>
         </div>
@@ -62,17 +62,25 @@
 
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         // Navbar toggle event
         $('.navbar-toggler').on('click', function () {
             $('.list-group').toggleClass('show-list');
         });
 
         // Modal show event
-        $('#login-button').on('click', function() {
+        $('#login-button').on('click', function () {
             $('#modal').modal('show');
         });
     });
+
+    $('form').on('submit', function(e) {
+        if ($('#id').val() == ''){
+            alert('아이디 입력안함');
+            e.preventDefault();
+        }
+    })
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
