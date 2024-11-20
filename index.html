@@ -90,6 +90,10 @@
     });
 
     $('#darkMode').on('click', function() {
+        $('body').toggleClass('dark');
+        $('.navbar').toggleClass('navbar-light navbar-dark bg-light bg-dark');
+        $(this).toggleClass('bg-dark bg-light text-dark');
+
         $(this).text(function (_, currentText) {
             return currentText === 'Dark 🔄' ? 'Light 🔄' : 'Dark 🔄';
         });
