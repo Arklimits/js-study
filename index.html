@@ -41,6 +41,7 @@
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
         <span class="navbar-brand">Navbar</span>
+        <span id="darkMode" class="badge bg-dark">Dark 🔄</span>
         <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -74,6 +75,7 @@
         });
     });
 
+    // LoginForm submit event
     $('form').on('submit', function (e) {
         if ($('#id').val() == '') {
             alert('아이디 입력안함');
@@ -85,8 +87,13 @@
             alert('비밀번호 6자 이상');
             e.preventDefault();
         }
-    })
+    });
 
+    $('#darkMode').on('click', function() {
+        $(this).text(function (_, currentText) {
+            return currentText === 'Dark 🔄' ? 'Light 🔄' : 'Dark 🔄';
+        });
+    });
 
 </script>
 
